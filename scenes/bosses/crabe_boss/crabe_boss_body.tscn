@@ -1,0 +1,114 @@
+[gd_scene load_steps=12 format=3 uid="uid://ctm1wjc4hjk5w"]
+
+[ext_resource type="Texture2D" uid="uid://dx4vjgbtn8ahg" path="res://assets/images/bosses/Crabe_boss/crabeCorps.png" id="1_4tw5k"]
+[ext_resource type="Script" uid="uid://dcxb87rntllq5" path="res://Scripts/bosses/crab/crabe_boss_body.gd" id="1_wxnas"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4tw5k"]
+radius = 66.0568
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wxnas"]
+radius = 57.0088
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_71nu5"]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2quvd"]
+size = Vector2(4, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0htg"]
+size = Vector2(4, 4)
+
+[sub_resource type="Animation" id="Animation_8eh4v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_i0htg"]
+resource_name = "close_mouth"
+
+[sub_resource type="Animation" id="Animation_2quvd"]
+resource_name = "open_mouth"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eiu6l"]
+_data = {
+&"RESET": SubResource("Animation_8eh4v"),
+&"close_mouth": SubResource("Animation_i0htg"),
+&"open_mouth": SubResource("Animation_2quvd")
+}
+
+[node name="crabe_boss_body" type="Area2D"]
+script = ExtResource("1_wxnas")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4tw5k")
+hframes = 3
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(1, 0.365)
+shape = SubResource("CircleShape2D_4tw5k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -6)
+scale = Vector2(1, 0.535)
+shape = SubResource("CircleShape2D_wxnas")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-30, 23)
+shape = SubResource("CircleShape2D_71nu5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-15, 24)
+shape = SubResource("CircleShape2D_71nu5")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(12, 23)
+shape = SubResource("CircleShape2D_71nu5")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(28, 22)
+shape = SubResource("CircleShape2D_71nu5")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(-16, -36.5)
+shape = SubResource("RectangleShape2D_2quvd")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(14, -37)
+shape = SubResource("RectangleShape2D_i0htg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+&"": SubResource("AnimationLibrary_eiu6l")
+}
+
+[node name="shooter_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="shooter_timer" to="." method="_on_shooter_timer_timeout"]

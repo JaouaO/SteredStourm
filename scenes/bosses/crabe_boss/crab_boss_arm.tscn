@@ -1,0 +1,357 @@
+[gd_scene load_steps=23 format=3 uid="uid://ucw6o6tmd3ss"]
+
+[ext_resource type="Script" uid="uid://dsesl5g0y4o24" path="res://Scripts/bosses/crab/crab_boss_arm.gd" id="1_oslr7"]
+[ext_resource type="Texture2D" uid="uid://bdtimqq1dvsup" path="res://assets/images/bosses/Crabe_boss/crabeMembres.png" id="1_qeaf3"]
+[ext_resource type="Script" uid="uid://bmqbos8kiye1" path="res://Scripts/bosses/crab/crabe_boss_lower_arm_area.gd" id="2_1bfdq"]
+[ext_resource type="Script" uid="uid://dbe7jqu6vkriq" path="res://Scripts/bosses/crab/crabe_boss_upper_pincer_area.gd" id="2_ukx67"]
+[ext_resource type="Script" uid="uid://ctnmkah5876wi" path="res://Scripts/bosses/crab/crabe_boss_lower_pincer_area.gd" id="3_oslr7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oslr7"]
+radius = 19.1344
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i4w8m"]
+radius = 20.8097
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bfdq"]
+radius = 27.2372
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qeaf3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ukx67"]
+radius = 17.226
+
+[sub_resource type="Animation" id="Animation_qeaf3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm/lower_pincer/upper_pincer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/lower_arm/lower_pincer:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/lower_arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ukx67"]
+resource_name = "pince"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm/lower_pincer/upper_pincer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.18879, 2.61799]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/lower_arm/lower_pincer:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.0472]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/lower_arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.0472]
+}
+
+[sub_resource type="Animation" id="Animation_1bfdq"]
+resource_name = "idle"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm/lower_pincer/upper_pincer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.14159, 2.87979, 3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_i4w8m"]
+resource_name = "pince"
+length = 0.85
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm/lower_pincer/upper_pincer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [3.14159, 4.45059, 2.61799, 4.45059, 2.61799, 4.45059, 2.61799, 4.45059, 2.61799, 3.14159]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1bfdq"]
+_data = {
+&"RESET": SubResource("Animation_qeaf3"),
+&"grab": SubResource("Animation_ukx67"),
+&"idle": SubResource("Animation_1bfdq"),
+&"pince": SubResource("Animation_i4w8m")
+}
+
+[sub_resource type="Animation" id="Animation_1m4hj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm/lower_pincer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_a1ujr"]
+resource_name = "move1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm/lower_pincer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.785398, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_oslr7"]
+resource_name = "move2"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm/lower_pincer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -1.309, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q2ctp"]
+_data = {
+&"RESET": SubResource("Animation_1m4hj"),
+&"move1": SubResource("Animation_a1ujr"),
+&"move2": SubResource("Animation_oslr7")
+}
+
+[sub_resource type="Animation" id="Animation_fclvt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_q2ctp"]
+resource_name = "move"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_arm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.523599, 0.0, -0.523599]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e7ory"]
+_data = {
+&"RESET": SubResource("Animation_fclvt"),
+&"move": SubResource("Animation_q2ctp")
+}
+
+[node name="crab_boss_arm" type="Node2D"]
+script = ExtResource("1_oslr7")
+
+[node name="upper_pincer" type="Polygon2D" parent="."]
+position = Vector2(-37, -52)
+rotation = 2.87979
+offset = Vector2(-103, -102)
+texture = ExtResource("1_qeaf3")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(117.747, 101.008, 113.256, 89.913, 105.463, 86.743, 95.6881, 86.6109, 90.6688, 90.7056, 89.0837, 97.3099, 89.7442, 104.839, 95.9523, 110.783, 109.029, 117.123, 125.143, 116.198, 132.805, 110.915, 131.616, 107.216, 123.823, 106.16)
+uv = PackedVector2Array(117.747, 101.008, 113.256, 89.913, 105.463, 86.743, 95.6881, 86.6109, 90.6688, 90.7056, 89.0837, 97.3099, 89.7442, 104.839, 95.9523, 110.783, 109.029, 117.123, 125.143, 116.198, 132.805, 110.915, 136.371, 106.028, 123.823, 106.16)
+bones = ["lower_arm", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "lower_arm/lower_pincer", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "lower_arm/lower_pincer/upper_pincer", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5)]
+
+[node name="lower_pincer" type="Polygon2D" parent="."]
+position = Vector2(-31, -20)
+rotation = 2.0944
+offset = Vector2(-180, -101)
+texture = ExtResource("1_qeaf3")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(155.523, 112.718, 153.976, 104.016, 160.551, 85.0639, 168.48, 75.7813, 173.699, 73.8481, 184.335, 74.4282, 188.203, 80.8101, 186.849, 95.1208, 196.519, 114.266, 206.575, 126.45, 205.799, 128.385, 196.71, 128.385, 185.107, 117.942, 178.532, 115.041, 168.862, 117.555, 161.32, 118.522)
+uv = PackedVector2Array(155.523, 112.718, 153.976, 104.016, 160.551, 85.0639, 168.48, 75.7813, 173.699, 73.8481, 184.335, 74.4282, 188.203, 80.8101, 186.849, 95.1208, 196.519, 114.266, 206.575, 126.45, 205.799, 128.385, 196.71, 128.385, 185.107, 117.942, 178.532, 115.041, 168.862, 117.555, 161.32, 118.522)
+bones = ["lower_arm", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "lower_arm/lower_pincer", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "lower_arm/lower_pincer/upper_pincer", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="lower_arm" type="Polygon2D" parent="."]
+rotation = 1.5708
+offset = Vector2(-37, -101)
+texture = ExtResource("1_qeaf3")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(16.7245, 113.307, 16.7245, 97.8391, 32.3723, 82.5511, 49.4588, 80.5727, 56.2935, 90.4649, 54.315, 107.731, 37.2284, 120.861, 22.48, 120.681)
+uv = PackedVector2Array(16.7245, 113.307, 16.7245, 97.8391, 32.3723, 82.5511, 49.4588, 80.5727, 56.2935, 90.4649, 54.315, 107.731, 37.2284, 120.861, 22.48, 120.681)
+bones = ["lower_arm", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "lower_arm/lower_pincer", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "lower_arm/lower_pincer/upper_pincer", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="lower_arm" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(10, 13)
+rest = Transform2D(1, 0, 0, 1, 10, 13)
+
+[node name="lower_arm_area" type="Area2D" parent="Skeleton2D/lower_arm" groups=["ennemies"]]
+position = Vector2(-10, -13)
+rotation = 1.57079
+script = ExtResource("2_1bfdq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/lower_arm/lower_arm_area"]
+position = Vector2(-5.96115e-08, 0)
+rotation = -0.785397
+scale = Vector2(1, 0.655)
+shape = SubResource("CircleShape2D_oslr7")
+
+[node name="lower_pincer" type="Bone2D" parent="Skeleton2D/lower_arm"]
+position = Vector2(-23, -25)
+rest = Transform2D(1, 0, 0, 1, -23, -25)
+
+[node name="lower_pincer_area" type="Area2D" parent="Skeleton2D/lower_arm/lower_pincer" groups=["ennemies"]]
+position = Vector2(-17, -7)
+rotation = 2.09439
+script = ExtResource("3_oslr7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/lower_arm/lower_pincer/lower_pincer_area"]
+position = Vector2(-8.69617, -3.06213)
+rotation = 2.01062
+scale = Vector2(1, 0.585)
+shape = SubResource("CircleShape2D_i4w8m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Skeleton2D/lower_arm/lower_pincer/lower_pincer_area"]
+position = Vector2(3.13401, 7.42819)
+rotation = 0.785397
+scale = Vector2(1, -0.135)
+shape = SubResource("CircleShape2D_1bfdq")
+
+[node name="bullet_origin" type="Node2D" parent="Skeleton2D/lower_arm/lower_pincer"]
+position = Vector2(-49, -6)
+rotation = 1.0472
+
+[node name="upper_pincer" type="Bone2D" parent="Skeleton2D/lower_arm/lower_pincer"]
+position = Vector2(-21, -27)
+rotation = 3.14159
+rest = Transform2D(-0.866025, -0.5, 0.5, -0.866025, -19, -30)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 180.0
+
+[node name="upper_pincer_area" type="Area2D" parent="Skeleton2D/lower_arm/lower_pincer/upper_pincer" groups=["ennemies"]]
+position = Vector2(-2.79248e-05, 11)
+rotation = -0.127409
+script = ExtResource("2_ukx67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton2D/lower_arm/lower_pincer/upper_pincer/upper_pincer_area"]
+position = Vector2(3.29532, -8.4345)
+shape = SubResource("CircleShape2D_qeaf3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Skeleton2D/lower_arm/lower_pincer/upper_pincer/upper_pincer_area"]
+position = Vector2(17.7842, -4.55217)
+rotation = -0.349066
+scale = Vector2(1, 0.24)
+shape = SubResource("CircleShape2D_ukx67")
+
+[node name="upper_pincer_player" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1bfdq")
+}
+autoplay = "idle"
+
+[node name="lower_pincer_player" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q2ctp")
+}
+autoplay = "move2"
+
+[node name="lower_arm_player" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e7ory")
+}
+autoplay = "move"
+
+[connection signal="died" from="." to="Skeleton2D/lower_arm/lower_arm_area" method="_on_crab_boss_arm_died"]
+[connection signal="died" from="." to="Skeleton2D/lower_arm/lower_pincer/lower_pincer_area" method="_on_crab_boss_arm_died"]
+[connection signal="died" from="." to="Skeleton2D/lower_arm/lower_pincer/upper_pincer/upper_pincer_area" method="_on_crab_boss_arm_died"]
+[connection signal="damaged" from="Skeleton2D/lower_arm/lower_arm_area" to="." method="_on_lower_arm_area_damaged"]
+[connection signal="damaged" from="Skeleton2D/lower_arm/lower_pincer/lower_pincer_area" to="." method="_on_lower_pincer_area_damaged"]
+[connection signal="damaged" from="Skeleton2D/lower_arm/lower_pincer/upper_pincer/upper_pincer_area" to="." method="_on_upper_pincer_area_damaged"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4g4nlh3kv8fd"
-path="res://.godot/imported/Enemy_big_projectile (32 x 32).png-65f62a18120bdad73d2c95013b121125.ctex"
+path="res://.godot/imported/Enemy_big_projectile (32 x 32).png-0ef1162257bd1504c4a9ab4e2fd184cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets_schmup/projectiles/Enemy_big_projectile (32 x 32).png"
-dest_files=["res://.godot/imported/Enemy_big_projectile (32 x 32).png-65f62a18120bdad73d2c95013b121125.ctex"]
+source_file="res://assets/images/projectiles/Enemy_big_projectile (32 x 32).png"
+dest_files=["res://.godot/imported/Enemy_big_projectile (32 x 32).png-0ef1162257bd1504c4a9ab4e2fd184cc.ctex"]
 
 [params]
 

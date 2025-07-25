@@ -1,0 +1,281 @@
+[gd_scene load_steps=19 format=3 uid="uid://do4vxv0hn5no6"]
+
+[ext_resource type="PackedScene" uid="uid://ucw6o6tmd3ss" path="res://scenes/bosses/crabe_boss/crab_boss_arm.tscn" id="1_c1wg7"]
+[ext_resource type="Script" uid="uid://bbty45pf268h4" path="res://Scripts/bosses/crab/crabe_boss.gd" id="1_eughs"]
+[ext_resource type="PackedScene" uid="uid://ctm1wjc4hjk5w" path="res://scenes/bosses/crabe_boss/crabe_boss_body.tscn" id="1_haav2"]
+[ext_resource type="PackedScene" uid="uid://cg044jd7bwdsm" path="res://scenes/bosses/crabe_boss/crabe_boss_eye.tscn" id="2_c1wg7"]
+[ext_resource type="PackedScene" uid="uid://behjq7nl533x1" path="res://scenes/bosses/crabe_boss/crab_boss_leg.tscn" id="4_icuch"]
+[ext_resource type="PackedScene" uid="uid://dbjjs05lk2afv" path="res://scenes/bosses/crabe_boss/crabe_boss_eye_right.tscn" id="6_jcc8x"]
+
+[sub_resource type="Animation" id="Animation_v8elg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_leg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_di03c"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_leg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.261799, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ubral"]
+_data = {
+&"RESET": SubResource("Animation_v8elg"),
+&"idle": SubResource("Animation_di03c")
+}
+
+[sub_resource type="Animation" id="Animation_hhxg2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_leg/upper_leg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ubral"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/lower_leg/upper_leg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.785397, -0.349066, -0.785397]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hhxg2"]
+_data = {
+&"RESET": SubResource("Animation_hhxg2"),
+&"idle": SubResource("Animation_ubral")
+}
+
+[sub_resource type="Animation" id="Animation_0tq8c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-19, -48)]
+}
+
+[sub_resource type="Animation" id="Animation_e4lhj"]
+resource_name = "move_verticaly"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-19, -45.16), Vector2(-19, -37)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_atn8y"]
+_data = {
+&"RESET": SubResource("Animation_0tq8c"),
+&"move_verticaly": SubResource("Animation_e4lhj")
+}
+
+[sub_resource type="Animation" id="Animation_437yv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../crabe_boss_eye_right:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, -46)]
+}
+
+[sub_resource type="Animation" id="Animation_atn8y"]
+resource_name = "move_verticaly"
+length = 6.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../crabe_boss_eye_right:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, -46), Vector2(17, -41)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mjy77"]
+_data = {
+&"RESET": SubResource("Animation_437yv"),
+&"move_verticaly": SubResource("Animation_atn8y")
+}
+
+[node name="crabe_boss_master" type="Node2D" groups=["ennemies"]]
+script = ExtResource("1_eughs")
+
+[node name="crabe_boss_body" parent="." groups=["ennemies"] instance=ExtResource("1_haav2")]
+position = Vector2(122, 108)
+
+[node name="crabe_boss" type="Node2D" parent="crabe_boss_body"]
+
+[node name="legs" type="Node2D" parent="crabe_boss_body/crabe_boss"]
+z_index = -2
+
+[node name="right" type="Node2D" parent="crabe_boss_body/crabe_boss/legs"]
+
+[node name="crab_boss_leg2" parent="crabe_boss_body/crabe_boss/legs/right" instance=ExtResource("4_icuch")]
+position = Vector2(50, -4)
+
+[node name="crab_boss_leg3" parent="crabe_boss_body/crabe_boss/legs/right" instance=ExtResource("4_icuch")]
+position = Vector2(24, 13)
+rotation = 2.02633
+
+[node name="crab_boss_leg4" parent="crabe_boss_body/crabe_boss/legs/right" instance=ExtResource("4_icuch")]
+position = Vector2(12, 15)
+rotation = 2.26195
+
+[node name="crab_boss_leg" parent="crabe_boss_body/crabe_boss/legs/right" instance=ExtResource("4_icuch")]
+position = Vector2(30, -21)
+
+[node name="polygons2" type="Node2D" parent="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg"]
+position = Vector2(-39, 21)
+
+[node name="Skeleton2D2" type="Skeleton2D" parent="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg"]
+
+[node name="lower_leg_player2" type="AnimationPlayer" parent="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg"]
+libraries = {
+&"": SubResource("AnimationLibrary_ubral")
+}
+autoplay = "idle"
+
+[node name="upper_leg_player2" type="AnimationPlayer" parent="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg"]
+libraries = {
+&"": SubResource("AnimationLibrary_hhxg2")
+}
+autoplay = "idle"
+
+[node name="left" type="Node2D" parent="crabe_boss_body/crabe_boss/legs"]
+
+[node name="crab_boss_leg" parent="crabe_boss_body/crabe_boss/legs/left" instance=ExtResource("4_icuch")]
+position = Vector2(-35, -21)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="crab_boss_leg2" parent="crabe_boss_body/crabe_boss/legs/left" instance=ExtResource("4_icuch")]
+position = Vector2(-48, -4)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="crab_boss_leg3" parent="crabe_boss_body/crabe_boss/legs/left" instance=ExtResource("4_icuch")]
+position = Vector2(-26, 17)
+rotation = 1.13097
+scale = Vector2(1, -1)
+
+[node name="crab_boss_leg4" parent="crabe_boss_body/crabe_boss/legs/left" instance=ExtResource("4_icuch")]
+position = Vector2(-15, 16)
+rotation = 0.753982
+scale = Vector2(1, -1)
+
+[node name="crab_boss_arm" parent="crabe_boss_body/crabe_boss" instance=ExtResource("1_c1wg7")]
+z_index = -1
+position = Vector2(-61, 21)
+rotation = -1.19757
+
+[node name="crab_boss_arm2" parent="crabe_boss_body/crabe_boss" instance=ExtResource("1_c1wg7")]
+z_index = -1
+position = Vector2(58, 18)
+rotation = -1.86148
+scale = Vector2(1, -1)
+
+[node name="crabe_boss_eye_left2" parent="crabe_boss_body/crabe_boss" groups=["ennemies"] instance=ExtResource("2_c1wg7")]
+position = Vector2(-19, -48)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="crabe_boss_body/crabe_boss/crabe_boss_eye_left2"]
+libraries = {
+&"": SubResource("AnimationLibrary_atn8y")
+}
+autoplay = "move_verticaly"
+
+[node name="crabe_boss_eye_right" parent="crabe_boss_body/crabe_boss" groups=["ennemies"] instance=ExtResource("6_jcc8x")]
+position = Vector2(17, -46)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="crabe_boss_body/crabe_boss/crabe_boss_eye_right"]
+root_node = NodePath("../../crabe_boss_eye_left2")
+libraries = {
+&"": SubResource("AnimationLibrary_mjy77")
+}
+autoplay = "move_verticaly"
+
+[connection signal="damaged" from="crabe_boss_body" to="." method="_on_crabe_boss_damaged"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg2" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg2" to="." method="_on_crab_boss_leg_died"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg2" to="." method="_on_crab_boss_leg_2_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg3" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg3" to="." method="_on_crab_boss_leg_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg4" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg4" to="." method="_on_crab_boss_leg_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg" to="." method="_on_crab_boss_leg_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/left/crab_boss_leg" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/left/crab_boss_leg" to="." method="_on_crab_boss_leg_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/left/crab_boss_leg2" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/left/crab_boss_leg2" to="." method="_on_crab_boss_leg_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/left/crab_boss_leg3" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/left/crab_boss_leg3" to="." method="_on_crab_boss_leg_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/left/crab_boss_leg4" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/left/crab_boss_leg4" to="." method="_on_crab_boss_leg_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/crab_boss_arm" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/crab_boss_arm" to="." method="_on_crab_boss_arm_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/crab_boss_arm2" to="." method="_on_crabe_boss_damaged"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/crab_boss_arm2" to="." method="_on_crab_boss_arm_died"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/crabe_boss_eye_left2" to="." method="_on_crabe_boss_damaged"]
+[connection signal="damaged" from="crabe_boss_body/crabe_boss/crabe_boss_eye_right" to="." method="_on_crabe_boss_damaged"]

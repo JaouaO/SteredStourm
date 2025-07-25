@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://mnh48gmhl6ea"]
+
+[ext_resource type="Texture2D" uid="uid://bdtimqq1dvsup" path="res://assets/images/bosses/Crabe_boss/crabeMembres.png" id="1_lyoky"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n04th"]
+radius = 8.95494
+height = 18.1098
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lyoky"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tj8x2"]
+radius = 10.8624
+
+[node name="crabe_boss_upper_pincer" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lyoky")
+hframes = 3
+vframes = 3
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -8)
+rotation = -1.6709
+shape = SubResource("CapsuleShape2D_n04th")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(14, 5)
+rotation = -1.60552
+scale = Vector2(0.3, 1)
+shape = SubResource("CircleShape2D_lyoky")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+rotation = -4.22854
+scale = Vector2(0.7, 1)
+shape = SubResource("CircleShape2D_tj8x2")

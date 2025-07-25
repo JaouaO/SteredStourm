@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdtimqq1dvsup"
-path="res://.godot/imported/crabeMembres.png-8d2d09c5aa45e273f917f16129ab2d2e.ctex"
+path="res://.godot/imported/crabeMembres.png-b48739fd97f7e82085d23f5815bb7ea6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets_schmup/Crabe_boss/crabeMembres.png"
-dest_files=["res://.godot/imported/crabeMembres.png-8d2d09c5aa45e273f917f16129ab2d2e.ctex"]
+source_file="res://assets/images/bosses/Crabe_boss/crabeMembres.png"
+dest_files=["res://.godot/imported/crabeMembres.png-b48739fd97f7e82085d23f5815bb7ea6.ctex"]
 
 [params]
 

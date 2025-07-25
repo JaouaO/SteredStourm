@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwm7aaid8ssj2"]
+
+[ext_resource type="Texture2D" uid="uid://fhvrpnvahr6k" path="res://assets/images/general/bar_background.png" id="1_bxalq"]
+[ext_resource type="Script" uid="uid://dvf6bj7palvm5" path="res://Scripts/bosses/boss_hp.gd" id="1_qvx8b"]
+[ext_resource type="Texture2D" uid="uid://bibk2d3n4pw4w" path="res://assets/images/general/bar_foreground_red.png" id="2_bxalq"]
+
+[node name="boss_hp" type="Node2D" groups=["ennemies"]]
+script = ExtResource("1_qvx8b")
+
+[node name="health_bar" type="TextureProgressBar" parent="."]
+custom_minimum_size = Vector2(190, 20)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = 296.0
+offset_right = 216.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+value = 100.0
+fill_mode = 6
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("1_bxalq")
+texture_progress = ExtResource("2_bxalq")

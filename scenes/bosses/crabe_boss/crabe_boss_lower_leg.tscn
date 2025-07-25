@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceebnxk5w3105"]
+
+[ext_resource type="Texture2D" uid="uid://bdtimqq1dvsup" path="res://assets/images/bosses/Crabe_boss/crabeMembres.png" id="1_b0mth"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbowo"]
+size = Vector2(8, 22)
+
+[node name="crabe_boss_lower_leg" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -0.712465
+texture = ExtResource("1_b0mth")
+hframes = 3
+vframes = 3
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_pbowo")

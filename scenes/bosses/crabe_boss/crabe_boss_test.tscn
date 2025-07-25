@@ -1,0 +1,388 @@
+[gd_scene load_steps=25 format=3 uid="uid://g3g0jwapoehc"]
+
+[ext_resource type="PackedScene" uid="uid://ctm1wjc4hjk5w" path="res://scenes/bosses/crabe_boss/crabe_boss_body.tscn" id="1_e4lhj"]
+[ext_resource type="PackedScene" uid="uid://cg044jd7bwdsm" path="res://scenes/bosses/crabe_boss/crabe_boss_eye.tscn" id="2_0tq8c"]
+[ext_resource type="PackedScene" uid="uid://bf8yhyynqw7fn" path="res://scenes/bosses/crabe_boss/crabe_boss_lower_arm.tscn" id="3_atn8y"]
+[ext_resource type="PackedScene" uid="uid://jibjo5fcqxkb" path="res://scenes/bosses/crabe_boss/crabe_boss_lower_pincer.tscn" id="4_437yv"]
+[ext_resource type="Texture2D" uid="uid://bdtimqq1dvsup" path="res://assets/images/bosses/Crabe_boss/crabeMembres.png" id="5_0tq8c"]
+[ext_resource type="PackedScene" uid="uid://mnh48gmhl6ea" path="res://scenes/bosses/crabe_boss/crabe_boss_upper_pincer.tscn" id="5_mjy77"]
+[ext_resource type="PackedScene" uid="uid://ceebnxk5w3105" path="res://scenes/bosses/crabe_boss/crabe_boss_lower_leg.tscn" id="6_gtqtr"]
+[ext_resource type="PackedScene" uid="uid://cj3cglexmunj3" path="res://scenes/bosses/crabe_boss/crabe_boss_upper_leg.tscn" id="7_j5cn2"]
+
+[sub_resource type="Animation" id="Animation_gtqtr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_j5cn2"]
+resource_name = "close_mouth"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.566667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4, 0]
+}
+
+[sub_resource type="Animation" id="Animation_mjy77"]
+resource_name = "open_mouth"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gtqtr"]
+_data = {
+&"RESET": SubResource("Animation_gtqtr"),
+&"close_mouth": SubResource("Animation_j5cn2"),
+&"open_mouth": SubResource("Animation_mjy77")
+}
+
+[sub_resource type="Animation" id="Animation_0tq8c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-19, -48)]
+}
+
+[sub_resource type="Animation" id="Animation_e4lhj"]
+resource_name = "move_verticaly"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-19, -48), Vector2(-19, -37)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_atn8y"]
+_data = {
+&"RESET": SubResource("Animation_0tq8c"),
+&"move_verticaly": SubResource("Animation_e4lhj")
+}
+
+[sub_resource type="Animation" id="Animation_437yv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, -41)]
+}
+
+[sub_resource type="Animation" id="Animation_atn8y"]
+resource_name = "move_verticaly"
+length = 6.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, -41), Vector2(17, -48)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mjy77"]
+_data = {
+&"RESET": SubResource("Animation_437yv"),
+&"move_verticaly": SubResource("Animation_atn8y")
+}
+
+[sub_resource type="Animation" id="Animation_m6wjo"]
+resource_name = "move"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c7w5g"]
+_data = {
+&"move": SubResource("Animation_m6wjo")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n04th"]
+radius = 8.95494
+height = 18.1098
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lyoky"]
+radius = 16.1487
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tj8x2"]
+radius = 16.286
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vixno"]
+radius = 18.9534
+
+[node name="crabe_boss" type="Node2D"]
+
+[node name="crabe_boss_body" parent="." instance=ExtResource("1_e4lhj")]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="crabe_boss_body"]
+libraries = {
+&"": SubResource("AnimationLibrary_gtqtr")
+}
+
+[node name="crabe_boss_eye_left" parent="." instance=ExtResource("2_0tq8c")]
+position = Vector2(-19, -48)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="crabe_boss_eye_left"]
+libraries = {
+&"": SubResource("AnimationLibrary_atn8y")
+}
+autoplay = "move_verticaly"
+
+[node name="crabe_boss_eye_right" parent="." instance=ExtResource("2_0tq8c")]
+position = Vector2(17, -41)
+scale = Vector2(-1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="crabe_boss_eye_right"]
+libraries = {
+&"": SubResource("AnimationLibrary_mjy77")
+}
+autoplay = "move_verticaly"
+
+[node name="arms" type="Node" parent="."]
+
+[node name="arm_left" type="Node" parent="arms"]
+
+[node name="crabe_boss_upper_pincer" parent="arms/arm_left" instance=ExtResource("5_mjy77")]
+z_index = -3
+position = Vector2(-117, 52)
+rotation = 1.49197
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="arms/arm_left"]
+libraries = {
+&"": SubResource("AnimationLibrary_c7w5g")
+}
+
+[node name="crabe_boss_lower_pincer" parent="arms/arm_left" instance=ExtResource("4_437yv")]
+z_index = -2
+position = Vector2(-97, 45)
+rotation = 0.799732
+
+[node name="Sprite2D2" type="Sprite2D" parent="arms/arm_left/crabe_boss_lower_pincer"]
+position = Vector2(1, 2)
+texture = ExtResource("5_0tq8c")
+hframes = 3
+vframes = 3
+frame = 5
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="arms/arm_left/crabe_boss_lower_pincer"]
+position = Vector2(3, -18)
+rotation = -1.6709
+shape = SubResource("CapsuleShape2D_n04th")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="arms/arm_left/crabe_boss_lower_pincer"]
+position = Vector2(16, 13)
+rotation = -0.849581
+scale = Vector2(0.17, 1)
+shape = SubResource("CircleShape2D_lyoky")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="arms/arm_left/crabe_boss_lower_pincer"]
+position = Vector2(-4, -3)
+rotation = -2.67542
+scale = Vector2(0.7, 1)
+shape = SubResource("CircleShape2D_tj8x2")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="arms/arm_left/crabe_boss_lower_pincer"]
+position = Vector2(3, -4)
+rotation = 2.8918
+scale = Vector2(0.539059, 0.947085)
+skew = -0.284587
+shape = SubResource("CircleShape2D_tj8x2")
+
+[node name="crabe_boss_lower_arm" parent="arms/arm_left" instance=ExtResource("3_atn8y")]
+z_index = -1
+position = Vector2(-60, 22)
+rotation = -2.87979
+
+[node name="Sprite2D2" type="Sprite2D" parent="arms/arm_left/crabe_boss_lower_arm"]
+texture = ExtResource("5_0tq8c")
+hframes = 3
+vframes = 3
+frame = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="arms/arm_left/crabe_boss_lower_arm"]
+position = Vector2(1, -3)
+rotation = -2.39026
+scale = Vector2(0.62, 1)
+shape = SubResource("CircleShape2D_vixno")
+
+[node name="arm_right" type="Node" parent="arms"]
+
+[node name="crabe_boss_lower_arm" parent="arms/arm_right" instance=ExtResource("3_atn8y")]
+z_index = -1
+position = Vector2(58, 24)
+rotation = -2.7636
+scale = Vector2(-1, 1)
+
+[node name="crabe_boss_lower_pincer" parent="arms/arm_right" instance=ExtResource("4_437yv")]
+z_index = -2
+position = Vector2(82, 48)
+rotation = -0.96981
+scale = Vector2(-1, 1)
+
+[node name="crabe_boss_upper_pincer" parent="arms/arm_right" instance=ExtResource("5_mjy77")]
+z_index = -3
+position = Vector2(102, 51)
+rotation = -1.73394
+scale = Vector2(-1, 1)
+
+[node name="legs" type="Node" parent="."]
+
+[node name="left_legs" type="Node" parent="legs"]
+
+[node name="leg_left_1" type="Node" parent="legs/left_legs"]
+
+[node name="crabe_boss_lower_leg" parent="legs/left_legs/leg_left_1" instance=ExtResource("6_gtqtr")]
+z_index = -1
+position = Vector2(-47, -33)
+rotation = -0.521094
+scale = Vector2(-1, 1)
+
+[node name="crabe_boss_upper_leg" parent="legs/left_legs/leg_left_1" instance=ExtResource("7_j5cn2")]
+z_index = -2
+position = Vector2(-55, -42)
+rotation = -0.073778
+scale = Vector2(-1, 1)
+
+[node name="leg_left_2" type="Node" parent="legs/left_legs"]
+
+[node name="crabe_boss_lower_leg" parent="legs/left_legs/leg_left_2" instance=ExtResource("6_gtqtr")]
+z_index = -1
+position = Vector2(-69, -18)
+rotation = -1.3264
+scale = Vector2(-1, 1)
+
+[node name="crabe_boss_upper_leg" parent="legs/left_legs/leg_left_2" instance=ExtResource("7_j5cn2")]
+z_index = -2
+position = Vector2(-81, -21)
+rotation = -1.0039
+scale = Vector2(-1, 1)
+
+[node name="leg_left_3" type="Node" parent="legs/left_legs"]
+
+[node name="crabe_boss_lower_leg" parent="legs/left_legs/leg_left_3" instance=ExtResource("6_gtqtr")]
+z_index = -1
+position = Vector2(-37, 37)
+rotation = -2.62924
+scale = Vector2(-1, 1)
+
+[node name="crabe_boss_upper_leg" parent="legs/left_legs/leg_left_3" instance=ExtResource("7_j5cn2")]
+z_index = -2
+position = Vector2(-44, 48)
+rotation = -1.86124
+scale = Vector2(-1, 1)
+
+[node name="leg_left_4" type="Node" parent="legs/left_legs"]
+
+[node name="crabe_boss_lower_leg" parent="legs/left_legs/leg_left_4" instance=ExtResource("6_gtqtr")]
+z_index = -1
+position = Vector2(-18, 30)
+rotation = -2.48888
+scale = Vector2(-1, 1)
+
+[node name="crabe_boss_upper_leg" parent="legs/left_legs/leg_left_4" instance=ExtResource("7_j5cn2")]
+z_index = -2
+position = Vector2(-24, 40)
+rotation = -1.76685
+scale = Vector2(-1, 1)
+
+[node name="right_legs" type="Node" parent="legs"]
+
+[node name="leg_right_1" type="Node" parent="legs/right_legs"]
+
+[node name="crabe_boss_lower_leg" parent="legs/right_legs/leg_right_1" instance=ExtResource("6_gtqtr")]
+z_index = -1
+position = Vector2(45, -35)
+rotation = -2.67409
+
+[node name="crabe_boss_upper_leg" parent="legs/right_legs/leg_right_1" instance=ExtResource("7_j5cn2")]
+z_index = -2
+position = Vector2(50, -42)
+rotation = -0.487847
+
+[node name="leg_right_2" type="Node" parent="legs/right_legs"]
+
+[node name="crabe_boss_lower_leg" parent="legs/right_legs/leg_right_2" instance=ExtResource("6_gtqtr")]
+z_index = -1
+position = Vector2(56, -26)
+rotation = -2.16414
+
+[node name="crabe_boss_upper_leg" parent="legs/right_legs/leg_right_2" instance=ExtResource("7_j5cn2")]
+z_index = -2
+position = Vector2(65, -30)
+rotation = 0.0221053
+
+[node name="leg_right_3" type="Node" parent="legs/right_legs"]
+
+[node name="crabe_boss_lower_leg" parent="legs/right_legs/leg_right_3" instance=ExtResource("6_gtqtr")]
+z_index = -1
+position = Vector2(33, 36)
+rotation = -0.12632
+
+[node name="crabe_boss_upper_leg" parent="legs/right_legs/leg_right_3" instance=ExtResource("7_j5cn2")]
+z_index = -2
+position = Vector2(33, 45)
+rotation = 1.52422
+
+[node name="leg_right_4" type="Node" parent="legs/right_legs"]
+
+[node name="crabe_boss_lower_leg" parent="legs/right_legs/leg_right_4" instance=ExtResource("6_gtqtr")]
+z_index = -1
+position = Vector2(12, 38)
+rotation = 0.064326
+
+[node name="crabe_boss_upper_leg" parent="legs/right_legs/leg_right_4" instance=ExtResource("7_j5cn2")]
+z_index = -2
+position = Vector2(10, 46)
+rotation = 2.03279
+
+[editable path="crabe_boss_body"]
