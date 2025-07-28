@@ -1,4 +1,7 @@
-res://scenes/effects/bullet.tscn
 res://scenes/main.tscn
 res://scenes/player/player.tscn
-res://Scripts/bosses/crab/crab_boss_leg.gd
+res://scenes/effects/bullet.tscn
+res://scenes/ennemies/green/ennemy_green.tscn
+res://scenes/ennemies/levres/ennemy_levres.tscn
+res://scenes/ennemies/yellow/ennemyYellow.tscn
+res://Scripts/bosses/crab/crab_boss_arm.gd
