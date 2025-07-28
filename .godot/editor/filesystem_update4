@@ -1,3 +1,4 @@
+res://scenes/effects/bullet.tscn
 res://scenes/main.tscn
-res://Scripts/bosses/crab/crab_boss_arm.gd
+res://scenes/player/player.tscn
 res://Scripts/bosses/crab/crab_boss_leg.gd
