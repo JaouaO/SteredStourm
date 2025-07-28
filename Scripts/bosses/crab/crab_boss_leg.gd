@@ -1,7 +1,7 @@
 extends Node2D
 
 var explosion = preload("res://scenes/effects/explosion.tscn")
-var ennemy_bullet = preload("res://Scripts/ennemies/ennemy_effetcs/enemy_bullet.gd")
+var ennemy_bullet = preload("res://scenes/ennemies/ennemy_effects/enemy_bullet.tscn")
 
 
 signal damaged()
