@@ -1,8 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://cjakr0d6eyqpo"]
 
-[ext_resource type="Script" uid="uid://couypytyumhxg" path="res://Scripts/enemy_bullet.gd" id="1_agyw5"]
-[ext_resource type="Texture2D" uid="uid://b4g4nlh3kv8fd" path="res://Assets_schmup/projectiles/Enemy_big_projectile (32 x 32).png" id="1_ywhcl"]
-[ext_resource type="Texture2D" uid="uid://djeb54gdate86" path="res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="2_161bb"]
+[ext_resource type="Script" uid="uid://couypytyumhxg" path="res://Scripts/ennemies/ennemy_effetcs/enemy_bullet.gd" id="1_agyw5"]
+[ext_resource type="Texture2D" uid="uid://b4g4nlh3kv8fd" path="res://assets/images/projectiles/Enemy_big_projectile (32 x 32).png" id="1_ywhcl"]
+[ext_resource type="Texture2D" uid="uid://c840qvlow7meb" path="res://assets/images/general/Explosion (16 x 16).png" id="2_161bb"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_161bb"]
 atlas = ExtResource("1_ywhcl")

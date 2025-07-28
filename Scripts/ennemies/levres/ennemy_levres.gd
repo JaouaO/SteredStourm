@@ -1,7 +1,7 @@
 extends Area2D
 
-var bullet_scene = preload("res://Scripts/ennemies/ennemy_effetcs/enemy_bullet.gd")
-"""var explosion = preload("res://scenes/explosion.tscn")"""
+var bullet_scene = preload("res://scenes/ennemies/ennemy_effects/enemy_bullet.tscn")
+var explosion = preload("res://scenes/effects/explosion.tscn")
 
 signal died
 

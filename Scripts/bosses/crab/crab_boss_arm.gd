@@ -27,7 +27,7 @@ func shoot():
 	$upper_pincer_player.play("pince")
 	for i in max_bullets:
 		var bullet_instance = ennemy_bullet.instantiate()
-		get_tree().root.add_child(bullet_instance)
+		get_tree().root.call_deferred("add_child", bullet_instance)
 		bullet_instance.rotation = 20*i
 		bullet_instance.start($Skeleton2D/lower_arm/lower_pincer/bullet_origin.global_position)
 		bullet_instance.custom_direction()
