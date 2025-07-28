@@ -1,0 +1,3 @@
+res://scenes/main.tscn
+res://Scripts/bosses/crab/crab_boss_arm.gd
+res://Scripts/bosses/crab/crab_boss_leg.gd

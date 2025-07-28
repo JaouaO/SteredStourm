@@ -1,0 +1,100 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1753688310
+icon.svg::CompressedTexture2D::253762904456641509::1753688256::1753688312::1::::<><><>0<>0<>6ca61a986bccb8d0a1218bc7ec012f4e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1753688256
+::res://assets/images/::1753688256
+::res://assets/images/bosses/::1753688256
+::res://assets/images/bosses/Crabe_boss/::1753688256
+crabeCorps.png::CompressedTexture2D::8834763856181869292::1753688256::1753688312::1::::<><><>0<>0<>847e4dff4b955de502d4d73c8559129f<>res://.godot/imported/crabeCorps.png-f076d3c4f4963966dd6be1f946ecae25.ctex::
+crabeMembres.png::CompressedTexture2D::2636718423679974295::1753688256::1753688312::1::::<><><>0<>0<>85843fca2ff0e64f24db8f721353e9cb<>res://.godot/imported/crabeMembres.png-b48739fd97f7e82085d23f5815bb7ea6.ctex::
+::res://assets/images/ennemies/::1753688256
+ennemy_one.png::CompressedTexture2D::6214659813090529279::1753688256::1753688312::1::::<><><>0<>0<>1c40f18aff455b14328b8988cdfae28b<>res://.godot/imported/ennemy_one.png-787e170c5e79c5a05e6a859b18c50b53.ctex::
+ennemy_two.png::CompressedTexture2D::9209369555702139542::1753688256::1753688312::1::::<><><>0<>0<>6da5b5a5b0b5ea96809870fb48940292<>res://.godot/imported/ennemy_two.png-dbdfb680e4e87f4697096fe934645e8f.ctex::
+::res://assets/images/general/::1753688256
+background_space.png::CompressedTexture2D::4311199727374818615::1753688256::1753688312::1::::<><><>0<>0<>3f8528ea7331394f91475c060698dd50<>res://.godot/imported/background_space.png-6e8aa8169c3caf038b6e95c04e27dcb5.ctex::
+bar_background.png::CompressedTexture2D::366701086700208644::1753688256::1753688312::1::::<><><>0<>0<>7252bb93c9f9d223be9acf6fdc7d9b51<>res://.godot/imported/bar_background.png-70331dc535aa391e115905ca923e2d92.ctex::
+bar_foreground.png::CompressedTexture2D::6951116349669472220::1753688256::1753688312::1::::<><><>0<>0<>925b73bbdaffddb7ceab539b8c0b2358<>res://.godot/imported/bar_foreground.png-87b1aa3ea50c4c7b9f36cb03c1de754c.ctex::
+bar_foreground_red.png::CompressedTexture2D::2950651398369121072::1753688256::1753688312::1::::<><><>0<>0<>5e6ad45d8392f78f66e0386cbcf35540<>res://.godot/imported/bar_foreground_red.png-dd292b5dcdd6926dadc0df1b0706c556.ctex::
+Explosion (16 x 16).png::CompressedTexture2D::7150487780480612889::1753688256::1753688312::1::::<><><>0<>0<>f37de2cae0905d28d35a95c86114a645<>res://.godot/imported/Explosion (16 x 16).png-f8be734b3793a19553deb8194bf9fd66.ctex::
+GAME_OVER (72 x 8).png::CompressedTexture2D::6688786608083879218::1753688256::1753688312::1::::<><><>0<>0<>d1e2b9146f19b70e47f615aa25d37a13<>res://.godot/imported/GAME_OVER (72 x 8).png-dbeea336cfa3d1f8db3ac827354da6a3.ctex::
+Number_font (8 x 8).png::CompressedTexture2D::2901195750363149183::1753688256::1753688312::1::::<><><>0<>0<>383198430736f3149cddcafab5950bac<>res://.godot/imported/Number_font (8 x 8).png-d787d45081aeb8d45f273a2e46db1986.ctex::
+Player_life_icon (16 x 16).png::CompressedTexture2D::5518245404379995952::1753688256::1753688312::1::::<><><>0<>0<>fa6f0178299ca4d243e157db47dd25b5<>res://.godot/imported/Player_life_icon (16 x 16).png-c94cbce92e1ace87d4599b73ef91f856.ctex::
+Power_+_charge_bars (full + empty) (32 x 16).png::CompressedTexture2D::1696419703853603583::1753688256::1753688312::1::::<><><>0<>0<>1ae04c9d852e7dc9f03d8c8338c6a5c4<>res://.godot/imported/Power_+_charge_bars (full + empty) (32 x 16).png-42c1cd9351130db1ace3f77655aa6653.ctex::
+START (48 x 8).png::CompressedTexture2D::6469105435149719241::1753688256::1753688312::1::::<><><>0<>0<>e972235e0d514a04619aeef21d8d6c5f<>res://.godot/imported/START (48 x 8).png-e12cc103791fdae02ef09204e0c0f0c6.ctex::
+::res://assets/images/Player/::1753688256
+Boosters (16 x 16).png::CompressedTexture2D::3474855260403100579::1753688256::1753688312::1::::<><><>0<>0<>f403328778fe6582686892f85ced26cb<>res://.godot/imported/Boosters (16 x 16).png-65b02b6d7e7c0f57b19f2864ce95e3ce.ctex::
+Boosters_left (16 x 16).png::CompressedTexture2D::8654439909782870072::1753688256::1753688312::1::::<><><>0<>0<>1a95cea9b18e48d2f831c1e5796827dd<>res://.godot/imported/Boosters_left (16 x 16).png-03919d37da91df4efa3167e5288ffa75.ctex::
+Boosters_right (16 x 16).png::CompressedTexture2D::5778935741460846965::1753688256::1753688312::1::::<><><>0<>0<>fe55143d7d9c35220ee840ba12d8648c<>res://.godot/imported/Boosters_right (16 x 16).png-2c4397d040bfd4362df182a44f762fdd.ctex::
+player_ship.png::CompressedTexture2D::8146463692971403291::1753688256::1753688312::1::::<><><>0<>0<>c802173ee55ad0d66bb4d22fb116b2ae<>res://.godot/imported/player_ship.png-466300dda3eac772dc6d3ee447edc9f3.ctex::
+::res://assets/images/projectiles/::1753688256
+Enemy_big_projectile (32 x 32).png::CompressedTexture2D::4436068013688291385::1753688256::1753688312::1::::<><><>0<>0<>32e6569775990a44e2406203b21536c6<>res://.godot/imported/Enemy_big_projectile (32 x 32).png-0ef1162257bd1504c4a9ab4e2fd184cc.ctex::
+Enemy_projectile (16 x 16).png::CompressedTexture2D::4962204171828912690::1753688256::1753688312::1::::<><><>0<>0<>e0c7eec1362ac033f7a9e0fb308acede<>res://.godot/imported/Enemy_projectile (16 x 16).png-5c72bc5792848dba5952d0659d495a16.ctex::
+::res://scenes/::1753688256
+main.tscn::PackedScene::4056231486067649757::1753688256::0::1::::<><><>0<>0<><>::uid://b2om3hcab2mmh::::res://assets/images/general/background_space.png<>uid://c3jcky4d6ct7o::::res://Scripts/main.gd<>uid://d2wk00jky5mga::::res://scenes/player/player.tscn<>uid://bl53dnntpdwic::::res://scenes/ui/ui.tscn<>uid://cyfxhr5xcr7q8::::res://assets/images/general/START (48 x 8).png<>uid://c2kdlq7jcaona::::res://assets/images/general/GAME_OVER (72 x 8).png
+::res://scenes/bosses/::1753688256
+boss_hp.tscn::PackedScene::6343711416779728021::1753688256::0::1::::<><><>0<>0<><>::uid://fhvrpnvahr6k::::res://assets/images/general/bar_background.png<>uid://dvf6bj7palvm5::::res://Scripts/bosses/boss_hp.gd<>uid://bibk2d3n4pw4w::::res://assets/images/general/bar_foreground_red.png
+::res://scenes/bosses/crabe_boss/::1753688256
+crabe_boss.tscn::PackedScene::8203090088934476815::1753688256::0::1::::<><><>0<>0<><>::uid://ucw6o6tmd3ss::::res://scenes/bosses/crabe_boss/crab_boss_arm.tscn<>uid://bbty45pf268h4::::res://Scripts/bosses/crab/crabe_boss.gd<>uid://ctm1wjc4hjk5w::::res://scenes/bosses/crabe_boss/crabe_boss_body.tscn<>uid://cg044jd7bwdsm::::res://scenes/bosses/crabe_boss/crabe_boss_eye.tscn<>uid://behjq7nl533x1::::res://scenes/bosses/crabe_boss/crab_boss_leg.tscn<>uid://dbjjs05lk2afv::::res://scenes/bosses/crabe_boss/crabe_boss_eye_right.tscn
+crabe_boss_body.tscn::PackedScene::6132820335962478610::1753688256::0::1::::<><><>0<>0<><>::uid://dx4vjgbtn8ahg::::res://assets/images/bosses/Crabe_boss/crabeCorps.png<>uid://dcxb87rntllq5::::res://Scripts/bosses/crab/crabe_boss_body.gd
+crabe_boss_eye.tscn::PackedScene::5247396932680063484::1753688256::0::1::::<><><>0<>0<><>::uid://bjcpop1a0osrp::::res://Scripts/bosses/crab/crabe_boss_eye.gd<>uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png
+crabe_boss_eye_left.tscn::PackedScene::3706367072521440536::1753688256::0::1::::<><><>0<>0<><>::uid://bjcpop1a0osrp::::res://Scripts/bosses/crab/crabe_boss_eye.gd<>uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png
+crabe_boss_eye_right.tscn::PackedScene::7248610251671160343::1753688256::0::1::::<><><>0<>0<><>::uid://cg044jd7bwdsm::::res://scenes/bosses/crabe_boss/crabe_boss_eye.tscn
+crabe_boss_lower_arm.tscn::PackedScene::2806960374399618183::1753688256::0::1::::<><><>0<>0<><>::uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png
+crabe_boss_lower_leg.tscn::PackedScene::5061939410146791896::1753688256::0::1::::<><><>0<>0<><>::uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png
+crabe_boss_lower_pincer.tscn::PackedScene::648292185814220273::1753688256::0::1::::<><><>0<>0<><>::uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png
+crabe_boss_test.tscn::PackedScene::479345092462537824::1753688256::0::1::::<><><>0<>0<><>::uid://ctm1wjc4hjk5w::::res://scenes/bosses/crabe_boss/crabe_boss_body.tscn<>uid://cg044jd7bwdsm::::res://scenes/bosses/crabe_boss/crabe_boss_eye.tscn<>uid://bf8yhyynqw7fn::::res://scenes/bosses/crabe_boss/crabe_boss_lower_arm.tscn<>uid://jibjo5fcqxkb::::res://scenes/bosses/crabe_boss/crabe_boss_lower_pincer.tscn<>uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png<>uid://mnh48gmhl6ea::::res://scenes/bosses/crabe_boss/crabe_boss_upper_pincer.tscn<>uid://ceebnxk5w3105::::res://scenes/bosses/crabe_boss/crabe_boss_lower_leg.tscn<>uid://cj3cglexmunj3::::res://scenes/bosses/crabe_boss/crabe_boss_upper_leg.tscn
+crabe_boss_upper_leg.tscn::PackedScene::5462476270989051074::1753688256::0::1::::<><><>0<>0<><>::uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png
+crabe_boss_upper_pincer.tscn::PackedScene::869581584526201932::1753688256::0::1::::<><><>0<>0<><>::uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png
+crab_boss_arm.tscn::PackedScene::1409297545815980126::1753688256::0::1::::<><><>0<>0<><>::uid://dsesl5g0y4o24::::res://Scripts/bosses/crab/crab_boss_arm.gd<>uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png<>uid://bmqbos8kiye1::::res://Scripts/bosses/crab/crabe_boss_lower_arm_area.gd<>uid://dbe7jqu6vkriq::::res://Scripts/bosses/crab/crabe_boss_upper_pincer_area.gd<>uid://ctnmkah5876wi::::res://Scripts/bosses/crab/crabe_boss_lower_pincer_area.gd
+crab_boss_leg.tscn::PackedScene::2682203429531700984::1753688256::0::1::::<><><>0<>0<><>::uid://dgi6vhuvk6yvl::::res://Scripts/bosses/crab/crab_boss_leg.gd<>uid://d16rmiexm3is2::::res://Scripts/bosses/crab/lower_leg_area.gd<>uid://c8goein121kda::::res://Scripts/bosses/crab/upper_leg_area.gd<>uid://bdtimqq1dvsup::::res://assets/images/bosses/Crabe_boss/crabeMembres.png
+::res://scenes/effects/::1753688256
+bullet.tscn::PackedScene::4319022380583967048::1753688256::0::1::::<><><>0<>0<><>::uid://ccxy1pbveuona::::res://assets/images/projectiles/Enemy_projectile (16 x 16).png<>uid://d4gbfvxal7aeu::::res://Scripts/effect/bullet.gd
+explosion.tscn::PackedScene::1898157781823409372::1753688256::0::1::::<><><>0<>0<><>::uid://c840qvlow7meb::::res://assets/images/general/Explosion (16 x 16).png<>uid://crcoam2773s24::::res://Scripts/effect/explosion.gd
+::res://scenes/ennemies/::1753688256
+::res://scenes/ennemies/ennemy_effects/::1753688256
+enemy_bullet.tscn::PackedScene::5189496924202877435::1753688256::0::1::::<><><>0<>0<><>::uid://couypytyumhxg::::res://Scripts/enemy_bullet.gd<>uid://ccxy1pbveuona::::res://Assets_schmup/projectiles/Enemy_projectile (16 x 16).png<>uid://djeb54gdate86::::res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png
+ennemy_big_bullet.tscn::PackedScene::5405179807685514092::1753688256::0::1::::<><><>0<>0<><>::uid://couypytyumhxg::::res://Scripts/enemy_bullet.gd<>uid://b4g4nlh3kv8fd::::res://Assets_schmup/projectiles/Enemy_big_projectile (32 x 32).png<>uid://djeb54gdate86::::res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png
+ennemy_long_bullet.tscn::PackedScene::8564881307439555323::1753688256::0::1::::<><><>0<>0<><>::uid://couypytyumhxg::::res://Scripts/enemy_bullet.gd<>uid://ccxy1pbveuona::::res://Assets_schmup/projectiles/Enemy_projectile (16 x 16).png<>uid://djeb54gdate86::::res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png
+::res://scenes/ennemies/green/::1753688256
+ennemy_green.tscn::PackedScene::418068847507367590::1753688256::0::1::::<><><>0<>0<><>::uid://chjqv6lqov8ab::::res://Scripts/ennemies/green/ennemy_green.gd<>uid://c840qvlow7meb::::res://assets/images/general/Explosion (16 x 16).png<>uid://cusoslixp6rdn::::res://assets/images/ennemies/ennemy_one.png
+::res://scenes/ennemies/levres/::1753688256
+ennemy_levres.tscn::PackedScene::690984159467707598::1753688256::0::1::::<><><>0<>0<><>::uid://chxbtugbcmlq4::::res://Scripts/ennemies/levres/ennemy_levres.gd<>uid://d4hc8atgy3nhu::::res://assets/images/ennemies/ennemy_two.png<>uid://c840qvlow7meb::::res://assets/images/general/Explosion (16 x 16).png
+::res://scenes/ennemies/yellow/::1753688256
+ennemyYellow.tscn::PackedScene::4776468766920964326::1753688256::0::1::::<><><>0<>0<><>::uid://c3ns2fej4y3s2::::res://Scripts/ennemies/yellow/ennemyYellow.gd<>uid://cusoslixp6rdn::::res://assets/images/ennemies/ennemy_one.png<>uid://c840qvlow7meb::::res://assets/images/general/Explosion (16 x 16).png
+::res://scenes/player/::1753688256
+player.tscn::PackedScene::9100430282145392492::1753688256::0::1::::<><><>0<>0<><>::uid://bprimgm03lpqp::::res://assets/images/Player/Boosters (16 x 16).png<>uid://dp5fspvvhx277::::res://Scripts/player/player.gd<>uid://dvkjmjgheedky::::res://assets/images/Player/Boosters_left (16 x 16).png<>uid://b2sfwx0adacro::::res://scenes/effects/bullet.tscn<>uid://dochcjh5ut4gd::::res://assets/images/Player/player_ship.png<>uid://colmhy2ymkae4::::res://assets/images/Player/Boosters_right (16 x 16).png<>uid://c840qvlow7meb::::res://assets/images/general/Explosion (16 x 16).png
+::res://scenes/ui/::1753688256
+score_counter.tscn::PackedScene::8243924854428521272::1753688256::0::1::::<><><>0<>0<><>::uid://cqk7xfm41qbbb::::res://Scripts/ui/score_counter.gd<>uid://bhlmjgjr1irsx::::res://assets/images/general/Number_font (8 x 8).png
+ui.tscn::PackedScene::3222135433281897234::1753688256::0::1::::<><><>0<>0<><>::uid://fhvrpnvahr6k::::res://assets/images/general/bar_background.png<>uid://dyc2taxy7ggve::::res://Scripts/ui/ui.gd<>uid://c6bf4usk1oapo::::res://assets/images/general/bar_foreground.png<>uid://dppoidaoi1gei::::res://scenes/ui/score_counter.tscn
+::res://Scripts/::1753688256
+main.gd::GDScript::6756848986499794618::1753688256::0::1::::<>Node2D<><>0<>0<><>::
+::res://Scripts/bosses/::1753688256
+boss_hp.gd::GDScript::8645434191643828418::1753688256::0::1::::<>Node2D<><>0<>0<><>::
+::res://Scripts/bosses/crab/::1753688256
+crabe_boss.gd::GDScript::2497343299644991895::1753688256::0::1::::<>Node2D<><>0<>0<><>::
+crabe_boss_body.gd::GDScript::7347241782515747026::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+crabe_boss_eye.gd::GDScript::3023185615998824601::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+crabe_boss_lower_arm_area.gd::GDScript::95935399011374210::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+crabe_boss_lower_pincer_area.gd::GDScript::6134012781385928064::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+crabe_boss_upper_pincer_area.gd::GDScript::7239668294353910372::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+crab_boss_arm.gd::GDScript::8432032883321320819::1753688256::0::1::::<>Node2D<><>0<>0<><>::
+crab_boss_leg.gd::GDScript::7598830262916032365::1753688256::0::1::::<>Node2D<><>0<>0<><>::
+lower_leg_area.gd::GDScript::9049221741876066847::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+upper_leg_area.gd::GDScript::7102317096527673742::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scripts/effect/::1753688256
+bullet.gd::GDScript::9207195567605704076::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+explosion.gd::GDScript::5971031176127342235::1753688256::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+::res://Scripts/ennemies/::1753688256
+::res://Scripts/ennemies/ennemy_effetcs/::1753688256
+enemy_bullet.gd::GDScript::5798258019164164368::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scripts/ennemies/green/::1753688256
+ennemy_green.gd::GDScript::5283753292158475085::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scripts/ennemies/levres/::1753688256
+ennemy_levres.gd::GDScript::5311739668057185545::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scripts/ennemies/yellow/::1753688256
+ennemyYellow.gd::GDScript::6766107291603731743::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scripts/player/::1753688256
+player.gd::GDScript::8274362588781282132::1753688256::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scripts/ui/::1753688256
+score_counter.gd::GDScript::5918490942671063271::1753688256::0::1::::<>HBoxContainer<><>0<>0<><>::
+ui.gd::GDScript::8849596379453045462::1753688256::0::1::::<>MarginContainer<><>0<>0<><>::
