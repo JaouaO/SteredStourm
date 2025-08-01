@@ -2,6 +2,7 @@ extends Node2D
 
 var explosion = preload("res://scenes/effects/explosion.tscn")
 var ennemy_bullet = preload("res://scenes/ennemies/ennemy_effects/enemy_bullet.tscn")
+var heart_scene = preload("res://scenes/items/consummables/health_consummable.tscn")
 
 signal died
 signal damaged
@@ -42,6 +43,9 @@ func _on_lower_arm_area_damaged() -> void:
 	damaged.emit()
 	if hp<1:
 		died.emit()
+		var h = heart_scene.instantiate()
+		get_tree().root.add_child(h)
+		h.start(position)
 		queue_free()
 		
 
@@ -51,6 +55,9 @@ func _on_lower_pincer_area_damaged() -> void:
 	damaged.emit()
 	if hp<1:
 		died.emit()
+		var h = heart_scene.instantiate()
+		get_tree().root.add_child(h)
+		h.start(position)
 		queue_free()
 
 
@@ -60,4 +67,7 @@ func _on_upper_pincer_area_damaged() -> void:
 	shoot()
 	if hp<1:
 		died.emit()
+		var h = heart_scene.instantiate()
+		get_tree().root.add_child(h)
+		h.start(position)
 		queue_free()

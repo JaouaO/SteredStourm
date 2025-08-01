@@ -1,6 +1,7 @@
 extends Area2D
 
 var bullet_scene = preload("res://scenes/ennemies/ennemy_effects/enemy_bullet.tscn")
+var heart_scene = preload("res://scenes/items/consummables/health_consummable.tscn")
 
 signal died
 
@@ -35,6 +36,11 @@ func damage():
 	died.emit(ScoreValue)
 	ScoreValue = 0
 	await  $AnimationPlayer.animation_finished
+	var dropHeart = randf_range(0,100)
+	if dropHeart < 5:
+		var h = heart_scene.instantiate()
+		get_tree().root.add_child(h)
+		h.start(position)
 	queue_free()
 
 
