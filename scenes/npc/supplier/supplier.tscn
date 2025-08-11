@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://mh1r7ccjpty3"]
+
+[ext_resource type="Texture2D" uid="uid://bs5bpl4egpkgv" path="res://assets/images/npc/supplier/supplier.png" id="1_w78th"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rhkqt"]
+radius = 5.02494
+
+[sub_resource type="Animation" id="Animation_og3ed"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_koswc"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 2, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_08pco"]
+_data = {
+&"RESET": SubResource("Animation_og3ed"),
+&"idle": SubResource("Animation_koswc")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_grwlv"]
+radius = 7.07107
+
+[node name="Supplier" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -8)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_w78th")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.47, 1)
+shape = SubResource("CircleShape2D_rhkqt")
+
+[node name="AnimatedSprite2D" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_08pco")
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.285, -13)
+shape = SubResource("CircleShape2D_grwlv")

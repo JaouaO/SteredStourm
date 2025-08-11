@@ -48,7 +48,7 @@ func _on_upper_leg_area_damaged() -> void:
 		var dropHeart = randf_range(0,100)
 		if dropHeart < 51:
 			var h = heart_scene.instantiate()
-			get_tree().root.add_child(h)
+			get_tree().root.call_deferred("add_child", h)
 			h.start(position)
 		queue_free()
 

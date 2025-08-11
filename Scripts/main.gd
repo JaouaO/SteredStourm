@@ -27,7 +27,7 @@ func new_game():
 
 func spawn_ennemies():
 	
-	if lvl <2:
+	if lvl <0:
 		for x in range(9):
 			for y in range(3):
 				var d = enemyYellow.instantiate()

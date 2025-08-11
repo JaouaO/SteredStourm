@@ -77,4 +77,4 @@ func set_shield(value):
 func _on_area_entered(area):
 	if area.is_in_group("ennemies"):
 		area.damage()
-		shield -= max_shield / 2 	
+		shield -= 4 	
