@@ -2,10 +2,9 @@ extends Node2D
 
 var explosion = preload("res://scenes/effects/explosion.tscn")
 var ennemy_bullet = preload("res://scenes/ennemies/ennemy_effects/enemy_bullet.tscn")
-<<<<<<< HEAD
-=======
+
 var heart_scene = preload("res://scenes/items/consummables/health_consummable.tscn")
->>>>>>> 3e92777ef7610872cc97ff14299892e4c860d752
+
 
 
 signal damaged()
