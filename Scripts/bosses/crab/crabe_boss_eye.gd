@@ -25,7 +25,7 @@ func explode():
 	$Sprite2D.set_frame(7)
 
 
-var max_bullets:int= 2
+var max_bullets:int= 1
 func shoot():
 	$iris.look_at(player.position)
 	for i in max_bullets:

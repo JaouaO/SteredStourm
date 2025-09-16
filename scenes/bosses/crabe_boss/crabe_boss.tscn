@@ -257,8 +257,8 @@ autoplay = "move_verticaly"
 
 [connection signal="damaged" from="crabe_boss_body" to="." method="_on_crabe_boss_damaged"]
 [connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg2" to="." method="_on_crabe_boss_damaged"]
-[connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg2" to="." method="_on_crab_boss_leg_died"]
 [connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg2" to="." method="_on_crab_boss_leg_2_died"]
+[connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg2" to="." method="_on_crab_boss_leg_died"]
 [connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg3" to="." method="_on_crabe_boss_damaged"]
 [connection signal="died" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg3" to="." method="_on_crab_boss_leg_died"]
 [connection signal="damaged" from="crabe_boss_body/crabe_boss/legs/right/crab_boss_leg4" to="." method="_on_crabe_boss_damaged"]

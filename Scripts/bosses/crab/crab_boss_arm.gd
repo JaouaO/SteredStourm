@@ -2,6 +2,10 @@ extends Node2D
 
 var explosion = preload("res://scenes/effects/explosion.tscn")
 var ennemy_bullet = preload("res://scenes/ennemies/ennemy_effects/enemy_bullet.tscn")
+<<<<<<< HEAD
+=======
+var heart_scene = preload("res://scenes/items/consummables/health_consummable.tscn")
+>>>>>>> 3e92777ef7610872cc97ff14299892e4c860d752
 
 signal died
 signal damaged
@@ -27,7 +31,7 @@ func shoot():
 	$upper_pincer_player.play("pince")
 	for i in max_bullets:
 		var bullet_instance = ennemy_bullet.instantiate()
-		get_tree().root.add_child(bullet_instance)
+		get_tree().root.call_deferred("add_child", bullet_instance)
 		bullet_instance.rotation = 20*i
 		bullet_instance.start($Skeleton2D/lower_arm/lower_pincer/bullet_origin.global_position)
 		bullet_instance.custom_direction()
@@ -42,6 +46,9 @@ func _on_lower_arm_area_damaged() -> void:
 	damaged.emit()
 	if hp<1:
 		died.emit()
+		var h = heart_scene.instantiate()
+		get_tree().root.add_child(h)
+		h.start(position)
 		queue_free()
 		
 
@@ -51,6 +58,9 @@ func _on_lower_pincer_area_damaged() -> void:
 	damaged.emit()
 	if hp<1:
 		died.emit()
+		var h = heart_scene.instantiate()
+		get_tree().root.add_child(h)
+		h.start(position)
 		queue_free()
 
 
@@ -60,4 +70,7 @@ func _on_upper_pincer_area_damaged() -> void:
 	shoot()
 	if hp<1:
 		died.emit()
+		var h = heart_scene.instantiate()
+		get_tree().root.add_child(h)
+		h.start(position)
 		queue_free()
