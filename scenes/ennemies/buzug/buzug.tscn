@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmqqw7q4j6o7w"]
+
+[ext_resource type="Texture2D" uid="uid://cfbo5jfi6u5l7" path="res://assets/images/ennemies/ennemy_four.png" id="1_57b15"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2x62"]
+atlas = ExtResource("1_57b15")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vovki"]
+atlas = ExtResource("1_57b15")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vy4kb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2x62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vovki")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Buzug" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_57b15")
+hframes = 6
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_vy4kb")
+frame_progress = 0.5840814
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
