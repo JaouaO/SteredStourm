@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://bp63yl2lryaj6"]
+
+[ext_resource type="Texture2D" uid="uid://cm5t4o4tbedgv" path="res://assets/images/ennemies/ennemy_five.png" id="1_oi603"]
+[ext_resource type="Script" uid="uid://donpl7gq0kplc" path="res://Scripts/ennemies/ennemy_fly/ennemy_fly.gd" id="2_kwv2p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfup6"]
+atlas = ExtResource("1_oi603")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kknas"]
+atlas = ExtResource("1_oi603")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwv2p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfup6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kknas")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kwv2p"]
+radius = 5.0
+
+[node name="Ennemy_fly" type="Area2D" groups=["ennemies"]]
+script = ExtResource("2_kwv2p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kwv2p")
+autoplay = "default"
+frame_progress = 0.44812214
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+rotation = 6.7811985
+shape = SubResource("CircleShape2D_kwv2p")
+
+[node name="ShootTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="MoveTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

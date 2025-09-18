@@ -6,6 +6,7 @@ extends Node2D
 var enemyYellow = preload("res://scenes/ennemies/yellow/ennemyYellow.tscn")
 var enemy_green = preload("res://scenes/ennemies/green/ennemy_green.tscn")
 var ennemy_lips = preload("res://scenes/ennemies/levres/ennemy_levres.tscn")
+var ennemy_fly = preload("res://scenes/ennemies/ennemy_fly.tscn")
 var crabe_boss = preload("res://scenes/bosses/crabe_boss/crabe_boss.tscn")
 
 
@@ -27,10 +28,10 @@ func new_game():
 
 func spawn_ennemies():
 	
-	if lvl <0:
+	if lvl <3:
 		for x in range(9):
 			for y in range(3):
-				var d = enemyYellow.instantiate()
+				var d = ennemy_fly.instantiate()
 				var e = enemy_green.instantiate()
 				var f = ennemy_lips.instantiate()
 				var pos = Vector2(x*(16+8)+24, 16 * 4 + y * 16)
