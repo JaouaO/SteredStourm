@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://d13gin1h72gds"]
+
+[ext_resource type="Texture2D" uid="uid://bb4dttb3w57a6" path="res://assets/images/items/consummables/consummables_1.png" id="1_mibjt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mibjt"]
+atlas = ExtResource("1_mibjt")
+region = Rect2(32, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x3nn"]
+atlas = ExtResource("1_mibjt")
+region = Rect2(40, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8jxq"]
+atlas = ExtResource("1_mibjt")
+region = Rect2(48, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6x3nn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mibjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x3nn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8jxq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mibjt"]
+size = Vector2(7, 9)
+
+[node name="Area2D" type="Area2D" unique_id=853448832]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1557907541]
+sprite_frames = SubResource("SpriteFrames_6x3nn")
+autoplay = "default"
+frame_progress = 0.65736794
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1346772433]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_mibjt")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1737579314]

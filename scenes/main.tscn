@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bx14smgkh0myf"]
+[gd_scene format=3 uid="uid://bx14smgkh0myf"]
 
 [ext_resource type="Texture2D" uid="uid://b2om3hcab2mmh" path="res://assets/images/general/background_space.png" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://c3jcky4d6ct7o" path="res://Scripts/main.gd" id="1_sugp2"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bl53dnntpdwic" path="res://scenes/ui/ui.tscn" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cyfxhr5xcr7q8" path="res://assets/images/general/START (48 x 8).png" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://c2kdlq7jcaona" path="res://assets/images/general/GAME_OVER (72 x 8).png" id="6_tefeu"]
+[ext_resource type="Texture2D" uid="uid://bfcon056cuqag" path="res://assets/images/general/Victory.png" id="7_o6xl0"]
 
 [sub_resource type="Animation" id="Animation_sugp2"]
 length = 0.001
@@ -45,10 +46,10 @@ _data = {
 &"Scroll": SubResource("Animation_0wfyh")
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1402562633]
 script = ExtResource("1_sugp2")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1847902285]
 z_index = -4
 texture_repeat = 2
 texture = ExtResource("1_o5qli")
@@ -56,33 +57,35 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 240, 320)
 
-[node name="Player" parent="." instance=ExtResource("2_0wfyh")]
+[node name="Player" parent="." unique_id=689991762 instance=ExtResource("2_0wfyh")]
 position = Vector2(121, 173)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_jyhfs")
-}
-autoplay = "Scroll"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1262763509]
+libraries/ = SubResource("AnimationLibrary_jyhfs")
+autoplay = &"Scroll"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2022076170]
 
-[node name="UI" parent="CanvasLayer" instance=ExtResource("4_jyhfs")]
+[node name="UI" parent="CanvasLayer" unique_id=37369627 instance=ExtResource("4_jyhfs")]
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=631741444]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Start" type="TextureButton" parent="CanvasLayer/CenterContainer"]
+[node name="Start" type="TextureButton" parent="CanvasLayer/CenterContainer" unique_id=1413890210]
 layout_mode = 2
 texture_normal = ExtResource("5_tbgi4")
 
-[node name="GameOver" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+[node name="GameOver" type="TextureRect" parent="CanvasLayer/CenterContainer" unique_id=1964614825]
 layout_mode = 2
 texture = ExtResource("6_tefeu")
+
+[node name="Victory" type="TextureRect" parent="CanvasLayer/CenterContainer" unique_id=462532216]
+layout_mode = 2
+texture = ExtResource("7_o6xl0")
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="Player" to="CanvasLayer/UI" method="update_shield"]

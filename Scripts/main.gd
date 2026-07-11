@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var game_over = $CanvasLayer/CenterContainer/GameOver
 @onready var start_button = $CanvasLayer/CenterContainer/Start
+@onready var victory = $CanvasLayer/CenterContainer/Victory
 
 var enemyYellow = preload("res://scenes/ennemies/yellow/ennemyYellow.tscn")
 var enemy_green = preload("res://scenes/ennemies/green/ennemy_green.tscn")
@@ -16,10 +17,12 @@ var lvl = 0
 func _ready():
 	start_button.show()
 	game_over.hide()
+	victory.hide()
 #	spawn_ennemies()
 
 func new_game():
 	score = 0
+	lvl = 0
 	$CanvasLayer/UI.update_score(score)
 	$Player.start()
 	$Player.show()
@@ -61,8 +64,15 @@ func _on_enemy_died(value):
 	$CanvasLayer/UI.update_score(score)
 	await  get_tree().create_timer(2).timeout
 	if get_tree().get_nodes_in_group("ennemies").is_empty() && $Player.is_alive():
-		lvl += 1
-		spawn_ennemies()
+		if lvl == 3:
+			get_tree().call_group("ennemies", "queue_free")
+			victory.show()
+			await get_tree().create_timer(5).timeout
+			victory.hide()
+			start_button.show()
+		else:
+			lvl += 1
+			spawn_ennemies()
 
 
 func _on_start_pressed() -> void:

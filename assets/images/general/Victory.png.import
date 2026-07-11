@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbyck1174emoo"
-path="res://.godot/imported/repairship.png-d90566f1595eeb8534cc03898db79a1e.ctex"
+uid="uid://bfcon056cuqag"
+path="res://.godot/imported/Victory.png-5a3165ebe54c6a03bef16bc9cc01991a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/npc/repairship/repairship.png"
-dest_files=["res://.godot/imported/repairship.png-d90566f1595eeb8534cc03898db79a1e.ctex"]
+source_file="res://assets/images/general/Victory.png"
+dest_files=["res://.godot/imported/Victory.png-5a3165ebe54c6a03bef16bc9cc01991a.ctex"]
 
 [params]
 
