@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://2bqm73jpq20o"]
+[gd_scene format=3 uid="uid://2bqm73jpq20o"]
 
 [ext_resource type="Texture2D" uid="uid://c840qvlow7meb" path="res://assets/images/general/Explosion (16 x 16).png" id="1_17npe"]
 [ext_resource type="Script" uid="uid://crcoam2773s24" path="res://Scripts/effect/explosion.gd" id="2_nfeox"]
+[ext_resource type="AudioStream" uid="uid://ds0n1ovcccspl" path="res://assets/sound/vfx/explosion-2.mp3" id="3_d6bb2"]
+[ext_resource type="AudioStream" uid="uid://cnnov85f5fn5w" path="res://assets/sound/vfx/explosion-boss.mp3" id="4_yqd0p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nfeox"]
 atlas = ExtResource("1_17npe")
@@ -58,10 +60,17 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="explosion" type="AnimatedSprite2D"]
+[node name="explosion" type="AnimatedSprite2D" unique_id=287513670]
 sprite_frames = SubResource("SpriteFrames_cun36")
 animation = &"new_animation"
 autoplay = "new_animation"
 frame = 5
 frame_progress = 1.0
 script = ExtResource("2_nfeox")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1648592567]
+stream = ExtResource("3_d6bb2")
+volume_db = -16.37
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=453405530]
+stream = ExtResource("4_yqd0p")

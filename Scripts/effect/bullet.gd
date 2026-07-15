@@ -1,10 +1,13 @@
 extends Area2D
 @export var speed = -250
+@onready var sound = $AudioStreamPlayer
 
 var explosion = preload("res://scenes/effects/explosion.tscn")
 
 func start(pos):
 	position = pos
+	sound.set_pitch_scale(randf_range( 1,1.3))
+	sound.play()
 
 func _process(delta):
 	position.y += speed * delta

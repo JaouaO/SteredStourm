@@ -1,10 +1,16 @@
 extends Area2D
 
+@onready var sound = $bulletSound
+@onready var explosion_sound = $explosionSound
+
+
 @export var speed = 150
 var changed_direction = false
 
 func start(pos):
 	position = pos
+	sound.set_pitch_scale(randf_range( 1,1.3))
+	sound.play()
 	changed_direction = false
 
 
@@ -23,6 +29,8 @@ func _on_area_entered(area: Area2D):
 	if area.name == "Player":
 		speed = 0
 		$AnimationPlayer.play("explode")
+		explosion_sound.set_pitch_scale(randf_range( 1,1.3))
+		explosion_sound.play()
 		set_deferred("monitoring",false)
 		await  $AnimationPlayer.animation_finished
 		queue_free()

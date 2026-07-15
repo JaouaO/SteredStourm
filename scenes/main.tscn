@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cyfxhr5xcr7q8" path="res://assets/images/general/START (48 x 8).png" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://c2kdlq7jcaona" path="res://assets/images/general/GAME_OVER (72 x 8).png" id="6_tefeu"]
 [ext_resource type="Texture2D" uid="uid://bfcon056cuqag" path="res://assets/images/general/Victory.png" id="7_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://cgcgwhkxii654" path="res://assets/sound/musics/music_background.mp3" id="8_tipki"]
+[ext_resource type="AudioStream" uid="uid://2yytqavcqa7k" path="res://assets/sound/musics/Game_over.mp3" id="9_choun"]
+[ext_resource type="AudioStream" uid="uid://vuibuodoakle" path="res://assets/sound/musics/levelwin.mp3" id="10_ya4ey"]
+[ext_resource type="AudioStream" uid="uid://mpd0tmtf7s41" path="res://assets/sound/vfx/start_button_vfx.mp3" id="11_ya4ey"]
 
 [sub_resource type="Animation" id="Animation_sugp2"]
 length = 0.001
@@ -86,6 +90,21 @@ texture = ExtResource("6_tefeu")
 [node name="Victory" type="TextureRect" parent="CanvasLayer/CenterContainer" unique_id=462532216]
 layout_mode = 2
 texture = ExtResource("7_o6xl0")
+
+[node name="SoundTrack" type="AudioStreamPlayer" parent="." unique_id=4929675]
+stream = ExtResource("8_tipki")
+autoplay = true
+parameters/looping = true
+
+[node name="GameOverAudio" type="AudioStreamPlayer" parent="." unique_id=38017212]
+stream = ExtResource("9_choun")
+
+[node name="VictoryAudio" type="AudioStreamPlayer" parent="." unique_id=560391761]
+stream = ExtResource("10_ya4ey")
+volume_db = -12.519
+
+[node name="StartAudio" type="AudioStreamPlayer" parent="." unique_id=904059015]
+stream = ExtResource("11_ya4ey")
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="Player" to="CanvasLayer/UI" method="update_shield"]

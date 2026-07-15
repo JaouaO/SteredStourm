@@ -3,12 +3,17 @@ extends Node2D
 @onready var game_over = $CanvasLayer/CenterContainer/GameOver
 @onready var start_button = $CanvasLayer/CenterContainer/Start
 @onready var victory = $CanvasLayer/CenterContainer/Victory
+@onready var sound_track = $SoundTrack
+@onready var game_over_audio = $GameOverAudio
+@onready var victory_audio = $VictoryAudio
+@onready var start_audio = $StartAudio
 
 var enemyYellow = preload("res://scenes/ennemies/yellow/ennemyYellow.tscn")
 var enemy_green = preload("res://scenes/ennemies/green/ennemy_green.tscn")
 var ennemy_lips = preload("res://scenes/ennemies/levres/ennemy_levres.tscn")
 var ennemy_fly = preload("res://scenes/ennemies/ennemy_fly.tscn")
 var crabe_boss = preload("res://scenes/bosses/crabe_boss/crabe_boss.tscn")
+
 
 
 var score = 0
@@ -22,7 +27,7 @@ func _ready():
 
 func new_game():
 	score = 0
-	lvl = 0
+	lvl = 3
 	$CanvasLayer/UI.update_score(score)
 	$Player.start()
 	$Player.show()
@@ -62,11 +67,12 @@ func spawn_ennemies():
 func _on_enemy_died(value):
 	score += value
 	$CanvasLayer/UI.update_score(score)
-	await  get_tree().create_timer(2).timeout
+	await  get_tree().create_timer(4).timeout
 	if get_tree().get_nodes_in_group("ennemies").is_empty() && $Player.is_alive():
 		if lvl == 3:
 			get_tree().call_group("ennemies", "queue_free")
 			victory.show()
+			victory_audio.play()
 			await get_tree().create_timer(5).timeout
 			victory.hide()
 			start_button.show()
@@ -76,13 +82,16 @@ func _on_enemy_died(value):
 
 
 func _on_start_pressed() -> void:
-	start_button.hide()   
+	
+	start_button.hide()
+	start_audio.play()   
 	new_game()
 
 
 func _on_player_died() -> void:
 	get_tree().call_group("ennemies", "queue_free")
 	game_over.show()
-	await  get_tree().create_timer(2).timeout
+	game_over_audio.play()
+	await  get_tree().create_timer(4).timeout
 	game_over.hide()
 	start_button.show()

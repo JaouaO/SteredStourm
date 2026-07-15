@@ -56,14 +56,15 @@ func _on_crab_boss_arm_died() -> void:
 
 
 func _on_boss_hp_no_health() -> void:
-	died.emit(scoreValue)
-	var e = explosion.instantiate()
-	get_tree().root.add_child(e)
-	e.scale = Vector2(3, 3)
-	e.start($crabe_boss_body.position)
-	await e.animation_finished
-	var f = explosion.instantiate()
-	get_tree().root.add_child(f)
-	f.scale = Vector2(5, 5)
-	f.start($crabe_boss_body.position)
-	queue_free()
+	if hp==0:
+		died.emit(scoreValue)
+		var e = explosion.instantiate()
+		get_tree().root.add_child(e)
+		e.scale = Vector2(3, 3)
+		e.startBoss($crabe_boss_body.position)
+		await e.animation_finished
+		var f = explosion.instantiate()
+		get_tree().root.add_child(f)
+		f.scale = Vector2(5, 5)
+		f.start($crabe_boss_body.position)
+		queue_free()

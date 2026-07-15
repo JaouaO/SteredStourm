@@ -3,8 +3,9 @@ extends Area2D
 signal died
 signal shield_changed
 
-
+@onready var sound = $AudioStreamPlayer
 @onready var screensize = get_viewport_rect().size
+
 
 @export var max_shield = 10
 var shield = max_shield:
@@ -43,6 +44,7 @@ func start():
 	position = Vector2(screensize.x/2,screensize.y-64)
 	$GunCooldown.wait_time = cooldown
 	alive = true
+	self.set_collision_layer_value(1,1)
 	can_shoot = true
 	speed = max_speed
 
@@ -65,11 +67,18 @@ func _on_gun_cooldown_timeout():
 func set_shield(value):
 	shield = min(max_shield, value)
 	shield_changed.emit(max_shield,shield)
-	if shield <= 0:
-		$AnimationPlayer.play("explode_ship")
-		speed = 0
+	if shield <= 0 and alive:
 		alive = false
+		speed = 0
+		set_collision_layer_value(1, false)
+		set_collision_mask_value(1, false)
+
+		$AnimationPlayer.play("explode_ship")
+		sound.pitch_scale = randf_range(4.0, 5.0)
+		sound.play()
+
 		await $AnimationPlayer.animation_finished
+
 		hide()
 		died.emit()
 
