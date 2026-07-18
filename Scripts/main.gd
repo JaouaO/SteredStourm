@@ -27,7 +27,7 @@ func _ready():
 
 func new_game():
 	score = 0
-	lvl = 3
+	lvl = 0
 	$CanvasLayer/UI.update_score(score)
 	$Player.start()
 	$Player.show()
